@@ -233,7 +233,7 @@
       <input type="submit" name="submit" value="Submit" />
     </form>
 
-    <br />
+    <br/>
     <a href="index.php">Return to menu</a>
 
   </div>
