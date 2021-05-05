@@ -33,5 +33,17 @@
 		"usTeaspoons" => 0.00492892,
 		"liters" => 1,
 		"milliliters" => 0.001,
-	);  
+	);
+
+	const MASS_UNITS = array(
+		"ounces" =>	0.0283495,
+		"pounds" =>	0.453592,
+		"stones" =>	6.35029,
+		"longTons" =>	1016.05,
+		"shortTons" =>	907.185,
+		"milligrams" =>	0.000001,
+		"grams" =>	0.001,
+		"kilograms" =>	1,
+		"metricTonnes" =>	1000
+	);
 ?>
