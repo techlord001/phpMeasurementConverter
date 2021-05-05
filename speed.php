@@ -1,6 +1,6 @@
 <?php
 
-  require_once('includes/mass.php');
+  require_once('includes/speed.php');
 	require_once('includes/camelCase.php');
 
   // Default empty variables
@@ -15,33 +15,29 @@
     $fromUnit = $_POST['fromUnit'];
     $toUnit = $_POST['toUnit'];
 
-    $toValue = convertMass($fromValue, $fromUnit, $toUnit);
+    $toValue = convertSpeed($fromValue, $fromUnit, $toUnit);
   }
 
-	$massUnits = array(
-		"ounces",
-		"pounds",
-		"stones",
-		"long tons",
-		"short tons",
-		"milligrams",
-		"grams",
-		"kilograms",
-		"metric tonnes"
+	$speedUnits = array(
+		"feet per second",
+		"miles per hour",
+		"meters per second",
+		"kilometers per hour",
+		"knots"
 	);
 ?>
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Convert Mass</title>
+    <title>Convert Speed</title>
     <link href="styles.css" rel="stylesheet" type="text/css">
   </head>
   <body>
 
   <div id="main-content">
 
-    <h1>Convert Mass</h1>
+    <h1>Convert Speed</h1>
 
     <form action="" method="post">
 
@@ -50,7 +46,7 @@
         <input type="text" name="fromValue" value="<?php { echo $fromValue;} ?>" />&nbsp;
         <select name="fromUnit">
 					<?php
-						foreach ($massUnits as $unit) {
+						foreach ($speedUnits as $unit) {
 							echo "<option value=\"" . camelCase($unit) . "\"";
 							if ($fromUnit == camelCase($unit)) {
 								{
@@ -68,7 +64,7 @@
         <input type="text" name="toValue" value="<?php { echo $toValue;} ?>" />&nbsp;
         <select name="toUnit">
 					<?php
-						foreach ($massUnits as $unit) {
+						foreach ($speedUnits as $unit) {
 							echo "<option value=\"" . camelCase($unit) . "\"";
 							if ($toUnit == camelCase($unit)) {
 								{

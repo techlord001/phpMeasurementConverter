@@ -10,6 +10,7 @@
 		"kilometers" => 1000,
 		"acres" => 1000,
 		"hectares" => 1000,
+		"nauticalMiles" => 1852
 	);
 
 	const VOLUME_UNITS = array(
