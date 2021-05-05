@@ -3,26 +3,26 @@
 
 	function convertToSqMeters($value, $fromUnit)
 	{
-		$fromUnit = strtolower(str_replace('sq', '', $fromUnit));
-		if (array_key_exists($fromUnit, LENGTHS)) {
-			return $value * pow(LENGTHS[$fromUnit], 2);
+		if (array_key_exists($fromUnit, UNITS)) {
+			return $value * pow(UNITS[$fromUnit], 2);
 		} else {
 			return "Unsupported unit";
 		}
 	}
-
+	
 	function convertFromSqMeters($value, $toUnit)
 	{
-		$toUnit = strtolower(str_replace('sq', '', $toUnit));
-		if (array_key_exists($toUnit, LENGTHS)) {
-			return $value / pow(LENGTHS[$toUnit], 2);			
+		if (array_key_exists($toUnit, UNITS)) {
+			return $value / pow(UNITS[$toUnit], 2);			
 		} else {
 			return "Unsupported unit";
 		}
 	}
-
-	function convertSqLength($value, $fromUnit, $toUnit)
+	
+	function convertArea($value, $fromUnit, $toUnit)
 	{
+		$fromUnit = strtolower(str_replace('sq', '', $fromUnit));
+		$toUnit = strtolower(str_replace('sq', '', $toUnit));
 		$meterValue = convertToSqMeters($value, $fromUnit);
 		$newValue = convertFromSqMeters($meterValue, $toUnit);
 

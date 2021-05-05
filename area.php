@@ -14,7 +14,7 @@
     $fromUnit = $_POST['fromUnit'];
     $toUnit = $_POST['toUnit'];
 
-    $toValue = convertSqLength($fromValue, $fromUnit, $toUnit);
+    $toValue = convertArea($fromValue, $fromUnit, $toUnit);
   }
 ?>
 <!DOCTYPE html>
@@ -28,7 +28,7 @@
 
   <div id="main-content">
 
-    <h1>Convert Length</h1>
+    <h1>Convert Area</h1>
 
     <form action="" method="post">
 

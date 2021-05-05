@@ -3,8 +3,8 @@
 
 	function convertToMeters($value, $fromUnit)
 	{
-		if (array_key_exists($fromUnit, LENGTHS)) {
-			return $value * LENGTHS[$fromUnit];
+		if (array_key_exists($fromUnit, UNITS)) {
+			return $value * UNITS[$fromUnit];
 		} else {
 			return "Unsupported unit";
 		}
@@ -12,8 +12,8 @@
 
 	function convertFromMeters($value, $toUnit)
 	{
-		if (array_key_exists($toUnit, LENGTHS)) {
-			return $value / LENGTHS[$toUnit];			
+		if (array_key_exists($toUnit, UNITS)) {
+			return $value / UNITS[$toUnit];			
 		} else {
 			return "Unsupported unit";
 		}
