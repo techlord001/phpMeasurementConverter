@@ -63,7 +63,7 @@
 					<?php
 						foreach ($volumeUnits as $unit) {
 							echo "<option value=\"" . camelCase($unit) . "\"";
-							if ($fromUnit == 'cubeInches') {
+							if ($fromUnit == $unit) {
 								{
 									echo " selected";
 								}
@@ -81,7 +81,7 @@
 					<?php
 						foreach ($volumeUnits as $unit) {
 							echo "<option value=\"" . camelCase($unit) . "\"";
-							if ($toUnit == 'cubeInches') {
+							if ($toUnit == $unit) {
 								{
 									echo " selected";
 								}
